@@ -1,4 +1,5 @@
-# Pypendu
+# Hangman Game
+
 
 
 ##  Description
@@ -22,3 +23,5 @@ There is another problem witch is that the dictionary in the which one I put the
 
 Finally, I tried to put a living character in the game to make it less boring. However, it was just an idea like another,
 so please don't notice it if you look to the script. Maybe you'll have some funny ideas to make it better.
+
+
