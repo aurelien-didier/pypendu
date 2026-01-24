@@ -1,8 +1,8 @@
-import random   #import des modules
+import random   #import des modules  #import of modules
 import sys
 import time
 
-running = True  #définition des variables
+running = True  #instanciation des variables  #instanciation of variables
 win = False
 end = False
 
@@ -15,6 +15,7 @@ mode = ""
 a = False
 
     #dictionnaire des mots du pendu (par longueur)
+    #dictionary of the words for the game (by length)
 list_mot = {
     3: ["Ane", "Axe","Bel","Bip","Car","Col","Coq","Cor","Cou","Cri","Gag","Gaz","Gel","Jus","Net","Nul","Val","Ski","Sot","Tas","Tic"],
     4: ["Atre","Beau","Bête","Boxe","Brun","Cerf","Chez","Cire","Dame","Dent","Dock","Dodo","Drap","Dune","Emeu","Fado","Faux","Ibis","Jazz","Joli","Joue","Kaki","Logo","Loin","Long","Lune","Lynx","Mine","Mûre","Ouïe","Ours","Pion","Rhum","Ride","Rock","Seau","Test","Thym","Trou","Truc","User","Vert","Yogi","Watt"],
@@ -44,6 +45,7 @@ def angry(print1 = "", print2 = "", print3 = "", repetitions = 1) :
 
 
         #Partie 1 du code : choix du mode de jeu et détermination du mot à deviner
+        #Part 1 of the script : choice of the game mode and determining the word to find
 
 while running:
 
@@ -117,6 +119,7 @@ while running:
     choice = ""
 
         #Partie 2 : pendu
+        #Part 2 : the game
 
     pendu = ["_"] * len(mot)
 
