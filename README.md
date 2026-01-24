@@ -4,7 +4,7 @@
 
 ##  Description
 
-This project is my first one as a young python developer learning python.
+This project is my first one as a young developer learning python.
 Its only goals were to help me learn how to use python language and to test 
 my skills in that language.
 
