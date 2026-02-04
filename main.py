@@ -47,24 +47,55 @@ def angry(print1 = "", print2 = "", print3 = "", repetitions = 1) :
         #Partie 1 du code : choix du mode de jeu et détermination du mot à deviner
         #Part 1 of the script : choice of the game mode and determining the word to find
 
+language = input("Choose a language (French/English) : ")
+language = language.lower()
+
+while language not in ["french", "english", "francais", "anglais", "français"] :
+
+    language = input("Error : Choose a language (French/English) : ")
+    language = language.lower()
+
+if language in ["french", "français", "francais"] :
+    language = "french"
+elif language in ["english", "anglais"] :
+    language = "english"
+
+
 while running:
 
-    mode = input("Choisissez un mode (deflet/undeflet/aide) : ")
+    if language == "french" :
+        mode = input("Choisissez un mode (deflet/undeflet/aide) : ")
+    else :
+        mode = input("Choose a mode (deflet/undeflet/help) : ")
     mode = mode.lower()
 
     while mode not in ["deflet","undeflet","exit"]:
 
-        if mode == "aide":
-            print("\nVous jouez au pendu."
-                "\n\nle but est de trouver le mot a deviner en donnant des lettres avec un compte d'erreurs de 14 maximum"
-                "\nsi vous donnez une bonne lettre tous ses emplacement dans le mot y sera indiqué."
-                "\n\nLe mode deflet vous permet de choisir le nombre de lettre dans le mot du pendu : "
-                "\nil varie de 3 à 10 lettres et vous pouvez choisir l'option mots longs (11 à 13 lettres)."
-                "\nle mode undeflet permet de rendre aléatoire le nombre de lettres : \nil varie donc de 3 à 13."
-                "\n\nVous pouvez quitter le jeu en écrivant exit dans les zones de réponses avant le lancement d'une "
-                  "partie et pouvez arrêter une partie en écrivant stop dans les zones de réponses durant la partie.")
+        if mode == "aide" or mode == "help" :
+            if language == "french" :
+                print("\nVous jouez au pendu."
+                    "\n\nle but est de trouver le mot a deviner en donnant des lettres avec un compte d'erreurs de 14 maximum"
+                    "\nsi vous donnez une bonne lettre tous ses emplacement dans le mot y sera indiqué."
+                    "\n\nLe mode deflet vous permet de choisir le nombre de lettre dans le mot du pendu : "
+                    "\nil varie de 3 à 10 lettres et vous pouvez choisir l'option mots longs (11 à 13 lettres)."
+                    "\nle mode undeflet permet de rendre aléatoire le nombre de lettres : \nil varie donc de 3 à 13."
+                    "\n\nVous pouvez quitter le jeu en écrivant exit dans les zones de réponses avant le lancement d'une "
+                      "partie et pouvez arrêter une partie en écrivant stop dans les zones de réponses durant la partie.")
 
-            mode = input("Choisissez un mode (deflet/undeflet/aide) : ")
+                mode = input("Choisissez un mode (deflet/undeflet/aide) : ")
+
+            else :
+                print("\nYou're playing the Hangman game."
+                    "\n\nthe goal is to find the word to guess by giving letters with a maximum error count of 14"
+                    "\nIf you give a correct letter, all its positions in the word will be indicated."
+                    "\n\nThe deflet mode allows you to choose the number of letters in the Hangman word : "
+                    "\nit varies from 3 to 10 letters, and you can also choose the long word option (11 to 13 letters)."
+                    "\nthe undeflet mode randomizes the number of letters. : \ntherefore, it varies from 3 to 13."
+                    "\n\nYou can exit the game by typing exit in the answer fields before starting a game "
+                      "and you can stop a game by typing stop in the answer fields during the game.")
+
+                mode = input("Choose a mode (deflet/undeflet/help) : ")
+
             mode = mode.lower()
 
         else :
